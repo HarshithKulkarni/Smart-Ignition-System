@@ -64,9 +64,9 @@ while True:
     cv2.imshow('Video', frame)
     print(flag)
     if(flag==1):
-        gpio.output(relay,gpio.HIGH)
-        time.sleep(1)
         gpio.output(relay,gpio.LOW)
+        time.sleep(1)
+        gpio.output(relay,gpio.HIGH)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
